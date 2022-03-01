@@ -11,6 +11,7 @@ public class Qn456 {
         hm.put(3, 7);
         hm.put(4, 9);
         hm.put(5, 11);
+        System.out.println("=== HashMap Implementation ===");
         System.out.println("Before: " + hm);
         putAndSort(hm, 6);
         System.out.println("After putAndSort: " + hm);
@@ -61,10 +62,13 @@ public class Qn456 {
             hm.put(i, rand.nextInt(1000, 10000));
         }
         int randInt = rand.nextInt(1000,10000);
+        System.out.println("RandInt: " + randInt);
         if (hm.containsValue(randInt)){
             hm.forEach((k,v)->{
                if ((int)v==randInt){
                    randIndex.set((int)k);
+                   // need to find a way to break out of foreach to get first hit instead of last hit
+                   // otherwise, use same loop method as in linkedlist (q123), will work fine.
                }
             });
         }

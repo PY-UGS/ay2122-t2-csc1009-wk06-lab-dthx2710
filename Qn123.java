@@ -10,6 +10,7 @@ public class Qn123 {
         llist.add(7);
         llist.add(9);
         llist.add(11);
+        System.out.println("=== LinkedList Implementation ===");
         System.out.println("Before: " + llist);
         addAndSort(llist, 6);
         System.out.println("After addAndSort: " + llist);
@@ -53,9 +54,11 @@ public class Qn123 {
             llist.add(rand.nextInt(1000, 10000));
         }
         int randInt = rand.nextInt(1000,10000);
+        System.out.println("RandInt: " + randInt);
         for (int i=0;i<500;++i){
             if ((int)llist.get(i)==randInt){
                 index = i;
+                break;
             }
         }
         return index;
